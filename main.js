@@ -9,7 +9,15 @@ for (let i = 0; i < gridSize; i++) {
 
 gridFrame.style.cssText = `grid-template-columns: repeat(${size}, auto)`;
 
-let mouseIsDown = false;
+const boxes = document.querySelectorAll(".gridFrame > div");
+
+boxes.forEach((box) => {
+  box.addEventListener("mouseover", (e) => {
+    e.target.style.backgroundColor = "green";
+  });
+});
+
+/* let mouseIsDown = false;
 
 document.addEventListener("mousedown", () => {
   mouseIsDown = true;
@@ -28,7 +36,7 @@ boxes.forEach((box) => {
     }
     e.target.style.backgroundColor = "green";
   });
-});
+}); */
 
 /* gridFrame.children.addEventListener(
   "mouseover",
